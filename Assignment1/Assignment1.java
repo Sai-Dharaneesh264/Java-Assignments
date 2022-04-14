@@ -37,9 +37,8 @@ public class Assignment1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         File file = new File("/home/saidg/Desktop/Zemoso Training/Blinklist_Clone/");
-        File[] files = file.listFiles();
+//        File[] files = file.listFiles();
         String regex = scanner.nextLine();
         getPath(file, regex);
-
     }
 }
