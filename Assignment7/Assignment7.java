@@ -33,7 +33,7 @@ class Implementation {
         return null;
     }
 }
-public class Assignment74 {
+public class Assignment7 {
     public static void main(String[] args) {
         Implementation obj=new Implementation();
         obj.knowCost("unicycle").cost();

@@ -11,7 +11,8 @@ public class Counter {
     public static void main(String[] args) throws FileNotFoundException {
         try {
             File input = new File(args[0]);
-            File output = new File("/home/saidg/IdeaProjects/JavaAssignments/src/com/java/Assignments/Assignment11/output.txt");
+            File output = new File("src/com/java/Assignments/Assignment11/output.txt");
+            System.out.println(output.getAbsolutePath());
             Scanner scanner = new Scanner(input);
             PrintWriter printer = new PrintWriter(output);
             Map<Character, Integer> map = new HashMap<>();

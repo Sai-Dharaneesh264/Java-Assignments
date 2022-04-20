@@ -1,16 +1,18 @@
 package com.java.Assignments.Assignment3;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class PingDemo {
-    public static void pingResult(String command) {
+    public static void pingResult(String command)  {
         String pingResult = "";
+        BufferedReader inputStream = null;
         try {
             Process p = Runtime.getRuntime().exec(command);
             String s = "";
-            BufferedReader inputStream = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            inputStream = new BufferedReader(new InputStreamReader(p.getInputStream()));
             while ((s = inputStream.readLine()) != null) {
                 System.out.println(s);
                 pingResult += s;
@@ -19,6 +21,9 @@ public class PingDemo {
         } catch (Exception e) {
             e.printStackTrace();
         }
+//        finally {
+//            inputStream.close();
+//        }
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
